@@ -18,11 +18,8 @@ echo $nowTime;
 
 // Q4 条件分岐-1 if文
 $device = "mac";
-if ($device === "mac"){
-    echo "使用OSは、macです。";
-} else 
-if ($device === "windows"){
-    echo "使用OSは、windowsです。";
+if ($device === "mac" || $device === "windows"){
+    echo "使用OSは、" . "$device" . "です。";
 } 
 else {
     echo "どちらでもありません。";
@@ -47,7 +44,6 @@ foreach($seven as $value) {
 $seven = ["東京都" => "新宿区", "神奈川県" => "横浜市", "千葉県" => "千葉市", "埼玉県" => "さいたま市", "栃木県" => "宇都宮市", "群馬県" => "前橋市", "茨城県" => "水戸市"];
 $sai = "埼玉県";
 if (array_key_exists($sai, $seven)) {
-    // 県名と県庁所在地を表示
     echo $sai . "の県庁所在地は、" . $seven[$sai] . "です。";
 } 
 
