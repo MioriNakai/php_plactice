@@ -1,7 +1,7 @@
 <?php
 // Q1 変数と文字列
 $name = "仲井";
-$message = "私の名前は" . "$name" . "です。";
+$message = "私の名前は「" . "$name" . "」です。";
 echo $message;
 
 // Q2 四則演算
@@ -42,9 +42,9 @@ foreach($seven as $value) {
 
 // Q8 連想配列-2
 $seven = ["東京都" => "新宿区", "神奈川県" => "横浜市", "千葉県" => "千葉市", "埼玉県" => "さいたま市", "栃木県" => "宇都宮市", "群馬県" => "前橋市", "茨城県" => "水戸市"];
-$sai = "埼玉県";
-if (array_key_exists($sai, $seven)) {
-    echo $sai . "の県庁所在地は、" . $seven[$sai] . "です。";
+foreach
+if ("埼玉県", "さいたま市") {
+    echo "$key . "の県庁所在地は、" . $seven[$sai] . "です。";
 } 
 
 // Q9 連想配列-3
@@ -67,12 +67,12 @@ echo hello("金谷") . "<br>";
 echo hello("安藤") . "<br>";
 
 // Q11 関数-2
+$price = 1000;
 function calcTaxInPrice($price) {
     $taxRate = 0.10; // 消費税率 10%
     $taxInPrice = $price * (1 + $taxRate); 
     return $taxInPrice;
 }
-$price = 1000;
 $taxInPrice = calcTaxInPrice($price);
 echo $price . "円の商品の税込価格は" . round($taxInPrice) . "円です。";
 
@@ -84,10 +84,8 @@ function distinguishNum($num) {
         return $num . "は奇数です。";
     }
 }
-$oddNumber = 11;
-$evenNumber = 24;
-echo distinguishNum($oddNumber) . "<br>";
-echo distinguishNum($evenNumber) . "<br>";
+echo distinguishNum(11) . "<br>";
+echo distinguishNum(24) . "<br>";
 
 // Q13 関数とswitch文
 function evaluateGrade($grade) {

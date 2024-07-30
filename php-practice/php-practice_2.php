@@ -45,7 +45,7 @@ foreach ($personalInfos as $info) {
     echo $index . '番目の' . $info['name'] . 'のメールアドレスは' . $info['mail'] . 'で、電話番号は' . $info['tel'] . 'です。<br>';
     $index++;
 }
-
+//foreach の中でkeyを1に対応させて矢印で結べる
 //問題3
 foreach ($personalInfos as $index => &$info) {
   $info['age'] = $ageList[$index];
