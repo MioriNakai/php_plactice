@@ -1,7 +1,7 @@
 <?php
 // Q1 変数と文字列
 $name = "仲井";
-$message = "私の名前は$name" . $newMassage = "です。";
+$message = "私の名前は" . "$name" . "です。";
 echo $message;
 
 // Q2 四則演算
