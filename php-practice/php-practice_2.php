@@ -56,10 +56,31 @@ var_dump($personalInfos);
 
 
 // Q3 オブジェクト-1
-
+$student = new Student(120, '山田');
+echo "学籍番号{$student->studentId}番の生徒は{$student->studentName}です。";
 
 // Q4 オブジェクト-2
+class Student
+{
+    public $studentId;
+    public $studentName;
 
+    public function construct($id, $name)
+    {
+        $this->studentId = $id;
+        $this->studentName = $name;
+    }
+    public function attend($subject)
+    {
+        echo "{$this->studentName}は{$subject}の授業に参加しました。学籍番号：{$this->studentId}";
+    }
+}
+$student = new Student(120, '山田');
+echo "学籍番号{$student->studentId}番の生徒は{$student->studentName}です。";
+$student->attend('PHP');
 
 // Q5 定義済みクラス
+$currentDate = new DateTime();
+$currentDate->modify('-1 month');
+echo $currentDate->format('Y-m-d');
 ?>
